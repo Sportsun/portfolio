@@ -4,648 +4,944 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vikas Pathak | Quality Analyst & Project Manager</title>
-    <meta name="description" content="Portfolio of Vikas Pathak - Quality Analyst and Project Manager">
+    <title>Vikas Pathak — Quality Analyst & Project Manager</title>
+    <meta name="description"
+        content="Portfolio of Vikas Pathak — Quality Analyst, Project Manager, and Full-stack Developer based in Noida, India.">
 
-    <!-- Fonts and Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <style>
-        /* ================= VARIABLES ================= */
+        /* ===================== CSS CUSTOM PROPERTIES ===================== */
         :root {
-            /* Text Colors */
-            --text-dark: #0f172a;
-            /* Deep Slate */
-            --text-muted: #475569;
-            /* Muted Slate */
-
-            /* Glass properties */
-            --glass-bg: rgba(255, 255, 255, 0.65);
-            --glass-card: rgba(255, 255, 255, 0.45);
-            --glass-border: rgba(255, 255, 255, 0.8);
-            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-
-            /* Accent Colors */
-            --accent-blue: #3b82f6;
-            --accent-pink: #ec4899;
-            --accent-purple: #8b5cf6;
-
-            --radius-sm: 12px;
-            --radius-md: 20px;
-            --radius-lg: 32px;
-
-            --font-main: 'Outfit', sans-serif;
+            --cream: #FFF9F0;
+            --ivory: #FFFDF8;
+            --sand: #F5EDE3;
+            --warm-gray: #E8DFD5;
+            --charcoal: #1B1B1E;
+            --slate: #2D2D34;
+            --muted: #6B6B76;
+            --teal: #0D9488;
+            --teal-light: #5EEAD4;
+            --coral: #F4845F;
+            --amber: #F59E0B;
+            --indigo: #6366F1;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
 
-        /* ================= RESET & TYPOGRAPHY ================= */
-        * {
+        /* ===================== GLOBAL RESET ===================== */
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: var(--font-main);
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
+        html {
             scroll-behavior: smooth;
-            background-color: #f8fafc;
+            font-size: 16px;
         }
 
-        h1,
-        h2,
-        h3,
-        h4 {
-            color: var(--text-dark);
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-        }
-
-        p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
+        body {
+            font-family: var(--font);
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         a {
             text-decoration: none;
-            transition: 0.3s;
-            cursor: pointer;
+            color: inherit;
+            transition: all 0.3s ease;
         }
 
         ul {
             list-style: none;
         }
 
-        /* ================= ANIMATED RGB MESH BACKGROUND ================= */
-        .mesh-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-            overflow: hidden;
-            background: #f8faff;
+        img {
+            max-width: 100%;
+            display: block;
         }
 
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.6;
-            animation: moveBlob 20s infinite alternate ease-in-out;
-        }
-
-        .blob-1 {
-            top: -10%;
-            left: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: rgba(147, 197, 253, 0.8);
-            /* Light Blue */
-            animation-delay: 0s;
-        }
-
-        .blob-2 {
-            top: 40%;
-            right: -20%;
-            width: 60vw;
-            height: 60vw;
-            background: rgba(249, 168, 212, 0.7);
-            /* Soft Pink */
-            animation-delay: -5s;
-        }
-
-        .blob-3 {
-            bottom: -20%;
-            left: 20%;
-            width: 45vw;
-            height: 45vw;
-            background: rgba(196, 181, 253, 0.8);
-            /* Soft Purple */
-            animation-delay: -10s;
-        }
-
-        .blob-4 {
-            top: 20%;
-            left: 40%;
-            width: 30vw;
-            height: 30vw;
-            background: rgba(167, 243, 208, 0.6);
-            /* Soft Mint Green */
-            animation-delay: -15s;
-        }
-
-        @keyframes moveBlob {
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            33% {
-                transform: translate(10vw, -15vh) scale(1.1);
-            }
-
-            66% {
-                transform: translate(-15vw, 10vh) scale(0.9);
-            }
-
-            100% {
-                transform: translate(-5vw, 20vh) scale(1.05);
-            }
-        }
-
-        /* ================= LAYOUT ================= */
-        .container {
-            max-width: 1050px;
+        /* ===================== REUSABLE ===================== */
+        .wrapper {
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 0 24px;
-            position: relative;
-            z-index: 10;
+            padding: 0 clamp(16px, 5vw, 40px);
         }
 
-        section {
-            padding: 90px 0;
+        .section-label {
+            font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--teal);
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
-        .glass-panel {
-            background: var(--glass-card);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--glass-shadow);
-            padding: 40px;
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -1px;
             margin-bottom: 40px;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: var(--charcoal);
         }
 
-        .section-header {
-            font-size: 2.2rem;
-            margin-bottom: 35px;
-            text-align: center;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-pink));
+        .section-title span {
+            background: linear-gradient(135deg, var(--teal), var(--indigo));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: inline-block;
-            width: 100%;
         }
 
-        /* ================= ANIMATIONS ================= */
+        /* ===================== REVEAL ANIMATION ===================== */
         .reveal {
             opacity: 0;
-            transform: translateY(40px) scale(0.98);
-            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(50px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .reveal.active {
             opacity: 1;
-            transform: translateY(0) scale(1);
+            transform: translateY(0);
         }
 
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-12px);
-                box-shadow: 0 25px 30px rgba(0, 0, 0, 0.1);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
         }
 
-        /* ================= HERO SECTION ================= */
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        /* ===================== NAVBAR ===================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 18px 0;
+            transition: all 0.4s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 249, 240, 0.92);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
+            padding: 12px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: var(--charcoal);
+            letter-spacing: -1px;
+        }
+
+        .nav-brand i {
+            color: var(--teal);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--muted);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--teal);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-resume {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 20px;
+            background: var(--charcoal);
+            color: white !important;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .nav-resume:hover {
+            background: var(--teal);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.3);
+        }
+
+        .nav-resume::after {
+            display: none !important;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 2.5px;
+            background: var(--charcoal);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ===================== HERO ===================== */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 80px;
         }
 
-        .hero-content {
-            text-align: center;
-            width: 100%;
-        }
-
-        .profile-container {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 30px;
+        /* Decorative shapes */
+        .hero-decor {
+            position: absolute;
             border-radius: 50%;
-            padding: 5px;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink), var(--accent-purple));
-            background-size: 200% 200%;
-            animation: float 5s ease-in-out infinite, gradientShift 4s ease infinite;
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+            z-index: 0;
+            pointer-events: none;
         }
 
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
+        .hero-decor-1 {
+            top: -80px;
+            right: -60px;
+            width: clamp(200px, 40vw, 500px);
+            height: clamp(200px, 40vw, 500px);
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.12), rgba(99, 102, 241, 0.08));
+            animation: heroFloat 8s ease-in-out infinite;
+        }
+
+        .hero-decor-2 {
+            bottom: -50px;
+            left: -80px;
+            width: clamp(150px, 30vw, 350px);
+            height: clamp(150px, 30vw, 350px);
+            background: linear-gradient(135deg, rgba(244, 132, 95, 0.1), rgba(245, 158, 11, 0.08));
+            animation: heroFloat 10s ease-in-out infinite reverse;
+        }
+
+        .hero-decor-3 {
+            top: 30%;
+            left: 15%;
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(13, 148, 136, 0.2);
+            background: transparent;
+            animation: heroSpin 12s linear infinite;
+        }
+
+        @keyframes heroFloat {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
             }
 
             50% {
-                background-position: 100% 50%;
+                transform: translate(-20px, 20px) scale(1.05);
+            }
+        }
+
+        @keyframes heroSpin {
+            0% {
+                transform: rotate(0deg);
             }
 
             100% {
-                background-position: 0% 50%;
+                transform: rotate(360deg);
             }
         }
 
-        .profile-img {
-            width: 100%;
-            height: 100%;
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: clamp(30px, 6vw, 80px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(13, 148, 136, 0.1);
+            color: var(--teal);
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-tag .dot {
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
+            background: var(--teal);
+            animation: blink 1.5s ease-in-out infinite;
         }
 
-        .hero h1 {
-            font-size: 4rem;
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             letter-spacing: -2px;
-            margin-bottom: 5px;
-            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 12px;
         }
 
-        .hero h2 {
-            font-size: 1.6rem;
-            color: var(--text-muted);
-            font-weight: 500;
+        .hero-text .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--muted);
+            font-weight: 400;
             margin-bottom: 30px;
         }
 
-        .contact-pills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+        .hero-text .subtitle strong {
+            color: var(--teal);
+            font-weight: 700;
         }
 
-        .pill {
+        .hero-cta {
             display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 10px 22px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-            transition: all 0.3s;
-        }
-
-        .pill:hover {
-            transform: translateY(-4px);
-            background: white;
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
-            border-color: var(--accent-blue);
-            color: var(--accent-blue);
-        }
-
-        /* ================= SUMMARY SECTION ================= */
-        .glass-panel p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .glass-panel p:last-child {
-            margin-bottom: 0;
-        }
-
-        .glass-panel strong {
-            color: var(--accent-purple);
+            padding: 14px 30px;
+            border-radius: 14px;
             font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border: none;
+            font-family: var(--font);
         }
 
-        /* ================= EXPERIENCE ================= */
-        .timeline {
+        .btn-primary {
+            background: var(--charcoal);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--teal);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(13, 148, 136, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--charcoal);
+            border: 2px solid var(--warm-gray);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--charcoal);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: clamp(20px, 4vw, 40px);
+        }
+
+        .stat-item h3 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            color: var(--teal);
+            line-height: 1;
+        }
+
+        .stat-item p {
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            display: flex;
+            justify-content: center;
             position: relative;
-            padding-left: 40px;
-            margin-top: 30px;
         }
 
-        .timeline::before {
+        .photo-frame {
+            position: relative;
+            width: clamp(260px, 28vw, 380px);
+            height: clamp(320px, 35vw, 460px);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .photo-frame::before {
             content: '';
             position: absolute;
-            left: 10px;
-            top: 10px;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple), transparent);
-            border-radius: 2px;
+            top: 15px;
+            left: 15px;
+            right: -15px;
+            bottom: -15px;
+            border-radius: 30px;
+            border: 3px solid var(--teal);
+            z-index: 0;
         }
 
-        .timeline-item {
-            position: relative;
-            margin-bottom: 50px;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-dot {
+        .photo-frame::after {
+            content: '';
             position: absolute;
-            left: -38px;
-            top: 6px;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background: white;
-            border: 4px solid var(--accent-blue);
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
-            z-index: 2;
-        }
-
-        .timeline-item:nth-child(2) .timeline-dot {
-            border-color: var(--accent-purple);
-            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
-        }
-
-        .timeline-item:nth-child(3) .timeline-dot {
-            border-color: var(--accent-pink);
-            box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.2);
-        }
-
-        .job-card {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            border-radius: var(--radius-md);
-            padding: 25px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
-            transition: all 0.3s;
-        }
-
-        .job-card:hover {
-            transform: translateY(-3px) translateX(5px);
-            background: rgba(255, 255, 255, 0.85);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .job-title {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        .job-company {
-            display: inline-block;
-            padding: 4px 12px;
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--accent-blue);
+            bottom: -25px;
+            right: -25px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--coral), var(--amber));
             border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 8px;
+            z-index: 1;
+            animation: heroFloat 5s ease-in-out infinite;
         }
 
-        .job-date {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            font-weight: 500;
+        /* ===================== ABOUT / SUMMARY ===================== */
+        .about-section {
+            padding: clamp(60px, 10vw, 100px) 0;
         }
 
-        .job-location {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 5px;
-            display: block;
-        }
-
-        .job-desc {
-            margin-top: 15px;
-        }
-
-        .job-desc li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 12px;
-            font-size: 1rem;
-            color: var(--text-dark);
-        }
-
-        .job-desc li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            top: 2px;
-            color: var(--accent-purple);
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        .projects-tested {
-            margin-top: 20px;
-            padding: 18px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: var(--radius-sm);
-            border: 1px dashed rgba(139, 92, 246, 0.4);
-        }
-
-        .projects-tested h4 {
-            margin-bottom: 12px;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* ================= SKILLS ================= */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .skill-category {
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: var(--radius-md);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            transition: all 0.4s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        .about-card {
+            background: white;
+            border-radius: 24px;
+            padding: clamp(25px, 5vw, 50px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
             position: relative;
             overflow: hidden;
         }
 
-        .skill-category::before {
+        .about-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-            opacity: 0;
-            transition: opacity 0.3s;
+            background: linear-gradient(90deg, var(--teal), var(--indigo), var(--coral));
         }
 
-        .skill-category:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.85);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        .about-card p {
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            color: var(--muted);
+            line-height: 1.8;
         }
 
-        .skill-category:hover::before {
-            opacity: 1;
+        .about-card strong {
+            color: var(--charcoal);
+            font-weight: 700;
         }
 
-        .skill-category h3 {
-            margin-bottom: 20px;
-            font-size: 1.25rem;
-            display: flex;
+        /* ===================== EXPERIENCE (LINKEDIN STYLE) ===================== */
+        .exp-section {
+            padding: clamp(60px, 10vw, 100px) 0;
+            background: white;
+        }
+
+        .exp-timeline {
+            position: relative;
+        }
+
+        .exp-item {
+            display: grid;
+            grid-template-columns: clamp(100px, 15vw, 180px) 1fr;
+            gap: clamp(20px, 4vw, 40px);
+            padding-bottom: 50px;
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        .exp-item:last-child {
+            padding-bottom: 0;
+        }
+
+        /* Vertical line */
+        .exp-item::before {
+            content: '';
+            position: absolute;
+            left: clamp(100px, 15vw, 180px);
+            top: 10px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--teal), var(--warm-gray));
+        }
+
+        .exp-item:last-child::before {
+            display: none;
+        }
+
+        /* Dot */
+        .exp-item::after {
+            content: '';
+            position: absolute;
+            left: calc(clamp(100px, 15vw, 180px) - 6px);
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid var(--teal);
+            z-index: 1;
+        }
+
+        .exp-date {
+            text-align: right;
+            padding-right: 25px;
+        }
+
+        .exp-date .period {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--charcoal);
+        }
+
+        .exp-date .location {
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        .exp-content {
+            padding-left: 25px;
+        }
+
+        .exp-role {
+            font-size: clamp(1.15rem, 2vw, 1.4rem);
+            font-weight: 800;
+            color: var(--charcoal);
+            margin-bottom: 4px;
+        }
+
+        .exp-company {
+            display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 6px;
+            padding: 4px 14px;
+            background: rgba(13, 148, 136, 0.08);
+            color: var(--teal);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 16px;
         }
 
-        .skill-tags {
+        .exp-list li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .exp-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--teal-light);
+        }
+
+        .tested-projects {
+            margin-top: 18px;
+            padding: 18px;
+            background: var(--ivory);
+            border-radius: 14px;
+            border: 1px dashed var(--warm-gray);
+        }
+
+        .tested-projects h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--charcoal);
+        }
+
+        .tested-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
         }
 
-        .tag {
+        .tested-chip {
+            padding: 6px 14px;
             background: white;
-            color: var(--text-dark);
-            padding: 8px 16px;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .tag:hover {
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-            color: white;
-            transform: scale(1.05) translateY(-2px);
-            box-shadow: 0 8px 15px rgba(59, 130, 246, 0.25);
-            border-color: transparent;
-        }
-
-        /* ================= PROJECTS & EDUCATION ================= */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .glass-mini-card {
-            background: rgba(255, 255, 255, 0.6);
-            padding: 30px;
-            border-radius: var(--radius-md);
-            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--slate);
+            border: 1px solid var(--warm-gray);
             transition: all 0.3s;
         }
 
-        .glass-mini-card:hover {
-            background: rgba(255, 255, 255, 0.9);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+        .tested-chip:hover {
+            background: var(--teal);
+            color: white;
+            border-color: var(--teal);
+            transform: translateY(-2px);
         }
 
-        .glass-mini-card h3 {
-            margin-bottom: 12px;
-            font-size: 1.2rem;
+        /* ===================== SKILLS ===================== */
+        .skills-section {
+            padding: clamp(60px, 10vw, 100px) 0;
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 40px);
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            border-radius: 40px;
-            z-index: 100;
-            padding: 12px 25px;
-            transition: all 0.3s ease;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+            gap: 24px;
         }
 
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-weight: 800;
-            font-size: 1.2rem;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-muted);
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-purple);
-        }
-
-        /* Scroll to top */
-        .scroll-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
+        .skill-card {
             background: white;
-            color: var(--accent-blue);
+            border-radius: 20px;
+            padding: clamp(22px, 4vw, 32px);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.05), rgba(99, 102, 241, 0.03));
+            transition: height 0.4s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .skill-card:hover::before {
+            height: 100%;
+        }
+
+        .skill-icon {
             width: 50px;
             height: 50px;
-            border-radius: 50%;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-pill {
+            padding: 6px 14px;
+            background: var(--cream);
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--slate);
+            transition: all 0.25s ease;
+        }
+
+        .skill-pill:hover {
+            background: var(--charcoal);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* ===================== EDUCATION & EXTRAS ===================== */
+        .extras-section {
+            padding: clamp(60px, 10vw, 100px) 0;
+            background: white;
+        }
+
+        .extras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+            gap: 24px;
+        }
+
+        .extra-card {
+            padding: clamp(22px, 4vw, 30px);
+            background: var(--ivory);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .extra-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .extra-card .card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+
+        .extra-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .extra-card .card-sub {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-bottom: 5px;
+        }
+
+        .extra-card .card-meta {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--teal);
+        }
+
+        .extra-card ul {
+            margin-top: 10px;
+        }
+
+        .extra-card li {
+            padding: 4px 0;
+            font-size: 0.9rem;
+            color: var(--muted);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .extra-card li:last-child {
+            border: none;
+        }
+
+        /* ===================== RESUME DOWNLOAD SECTION ===================== */
+        .cta-section {
+            padding: clamp(60px, 10vw, 100px) 0;
+            text-align: center;
+        }
+
+        .cta-card {
+            background: var(--charcoal);
+            border-radius: 30px;
+            padding: clamp(35px, 6vw, 60px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(13, 148, 136, 0.3), transparent 60%);
+            pointer-events: none;
+        }
+
+        .cta-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 60%);
+            pointer-events: none;
+        }
+
+        .cta-card h2 {
+            font-size: clamp(1.6rem, 4vw, 2.5rem);
+            color: white;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-card p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 36px;
+            background: white;
+            color: var(--charcoal);
+            border-radius: 16px;
+            font-weight: 800;
+            font-size: 1rem;
+            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-download:hover {
+            background: var(--teal);
+            color: white;
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(13, 148, 136, 0.4);
+        }
+
+        /* ===================== FOOTER ===================== */
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        /* ===================== SCROLL TO TOP ===================== */
+        .scroll-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: var(--charcoal);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
             opacity: 0;
             visibility: hidden;
             transition: all 0.4s;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            z-index: 99;
-            font-size: 1.2rem;
+            z-index: 999;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         .scroll-top:hover {
-            transform: translateY(-5px);
-            background: var(--accent-blue);
-            color: white;
+            background: var(--teal);
+            transform: translateY(-4px);
         }
 
         .scroll-top.visible {
@@ -653,44 +949,175 @@
             visibility: visible;
         }
 
-        /* ================= RESPONSIVE ================= */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.8rem;
+        /* ===================== RESPONSIVE DESIGN ===================== */
+
+        /* Large desktops & 4K */
+        @media (min-width: 1440px) {
+            .wrapper {
+                max-width: 1200px;
+            }
+        }
+
+        /* Tablets landscape */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
 
-            .hero h2 {
-                font-size: 1.3rem;
+            .hero-image {
+                order: -1;
             }
 
-            .job-header {
-                flex-direction: column;
+            .hero-cta {
+                justify-content: center;
             }
 
-            .job-date {
-                margin-top: 5px;
+            .hero-stats {
+                justify-content: center;
             }
 
-            section {
-                padding: 60px 0;
+            .hero-text .hero-tag {
+                margin: 0 auto 20px;
             }
 
-            .glass-panel {
-                padding: 25px;
+            .photo-frame {
+                width: 220px;
+                height: 270px;
             }
 
-            .timeline {
+            .exp-item {
+                grid-template-columns: 1fr;
+            }
+
+            .exp-date {
+                text-align: left;
+                padding-right: 0;
                 padding-left: 25px;
             }
 
-            .timeline::before {
-                left: 4px;
+            .exp-item::before {
+                left: 6px;
             }
 
-            .timeline-dot {
-                left: -26px;
-                width: 14px;
-                height: 14px;
+            .exp-item::after {
+                left: 0;
+            }
+        }
+
+        /* Tablets portrait */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--cream);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.open {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.1rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .photo-frame {
+                width: 200px;
+                height: 250px;
+            }
+
+            .photo-frame::after {
+                width: 50px;
+                height: 50px;
+                bottom: -15px;
+                right: -15px;
+            }
+
+            .hero-decor-3 {
+                display: none;
+            }
+        }
+
+        /* Mobile large */
+        @media (max-width: 560px) {
+            html {
+                font-size: 15px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+                letter-spacing: -1px;
+            }
+
+            .hero-stats {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                justify-content: center;
+            }
+
+            .photo-frame {
+                width: 180px;
+                height: 220px;
+            }
+
+            .photo-frame::before {
+                top: 10px;
+                left: 10px;
+                right: -10px;
+                bottom: -10px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .extras-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile small */
+        @media (max-width: 380px) {
+            html {
+                font-size: 14px;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                gap: 12px;
+            }
+
+            .stat-item h3 {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -698,326 +1125,384 @@
 
 <body>
 
-    <!-- Animated Mesh Background -->
-    <div class="mesh-bg">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-        <div class="blob blob-4"></div>
-    </div>
-
-    <!-- Floating Navigation -->
-    <nav>
-        <div class="nav-inner">
-            <div class="nav-logo">Vikas.</div>
-            <div class="nav-links">
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="wrapper nav-content">
+            <a href="#home" class="nav-brand">V<i class="fa-solid fa-circle"
+                    style="font-size:6px; vertical-align:middle; margin:0 1px;"></i>P</a>
+            <div class="nav-links" id="navLinks">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
-                <a href="Vikas_Pathak_Resume%20(2).pdf" download style="color: var(--accent-blue); font-weight: 700;"><i
-                        class="fa-solid fa-file-pdf"></i> Resume</a>
+                <a href="#education">Education</a>
+                <a href="Vikas_Pathak_Resume%20(2).pdf" download class="nav-resume"><i class="fa-solid fa-download"></i>
+                    Resume</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO ===== -->
     <section class="hero" id="home">
-        <div class="container hero-content reveal">
-            <!-- Profile Photo Container linked to image.png -->
-            <div class="profile-container">
-                <img src="image.png" alt="Vikas Pathak Profile Photo"
-                    onerror="this.src='https://placehold.co/400x400/eeeeee/3b82f6?text=VP'" class="profile-img">
+        <div class="hero-decor hero-decor-1"></div>
+        <div class="hero-decor hero-decor-2"></div>
+        <div class="hero-decor hero-decor-3"></div>
+
+        <div class="wrapper hero-grid">
+            <div class="hero-text reveal">
+                <div class="hero-tag"><span class="dot"></span> Open to Opportunities</div>
+                <h1>Hi, I'm <br>Vikas Pathak</h1>
+                <p class="subtitle"><strong>Quality Analyst</strong> & <strong>Project Manager</strong> crafting
+                    seamless digital experiences through precision testing and agile leadership.</p>
+
+                <div class="hero-cta">
+                    <a href="Vikas_Pathak_Resume%20(2).pdf" download class="btn btn-primary"><i
+                            class="fa-solid fa-download"></i> Download Resume</a>
+                    <a href="mailto:vp0990896@gmail.com" class="btn btn-outline"><i class="fa-solid fa-envelope"></i>
+                        Get in Touch</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>1+</h3>
+                        <p>Years QA Exp.</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>7+</h3>
+                        <p>Projects Tested</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>3+</h3>
+                        <p>Roles Held</p>
+                    </div>
+                </div>
             </div>
 
-            <h1>Vikas Pathak</h1>
-            <h2>Quality Analyst & Project Manager</h2>
-
-            <div class="contact-pills">
-                <a href="Vikas_Pathak_Resume%20(2).pdf" download class="pill"
-                    style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); color: white; border: none; font-weight: 700; padding: 12px 30px; margin-bottom: 5px; box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);">
-                    <i class="fa-solid fa-download" style="color: white; margin-right: 5px;"></i> Download Resume
-                </a>
-                <div style="width: 100%; height: 5px;"></div> <!-- Break -->
-                <a href="mailto:vp0990896@gmail.com" class="pill"><i class="fa-solid fa-envelope"
-                        style="color: var(--accent-blue);"></i> vp0990896@gmail.com</a>
-                <a href="tel:+918287066985" class="pill"><i class="fa-solid fa-phone"
-                        style="color: var(--accent-pink);"></i> +91 8287066985</a>
-                <a href="https://www.linkedin.com/in/vikas-pathak-928398363?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                    target="_blank" class="pill"><i class="fa-brands fa-linkedin"
-                        style="color: var(--accent-purple);"></i> LinkedIn</a>
-                <span class="pill"><i class="fa-solid fa-location-dot" style="color: var(--accent-blue);"></i> Noida,
-                    India</span>
+            <div class="hero-image reveal reveal-delay-2">
+                <div class="photo-frame">
+                    <img src="image.png" alt="Vikas Pathak"
+                        onerror="this.src='https://placehold.co/400x500/e8dfd5/1b1b1e?text=VP'">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Summary -->
-    <section id="about">
-        <div class="container reveal">
-            <div class="glass-panel">
-                <h2 class="section-header">Professional Summary</h2>
+    <!-- ===== ABOUT ===== -->
+    <section class="about-section" id="about">
+        <div class="wrapper reveal">
+            <p class="section-label">About Me</p>
+            <h2 class="section-title">Professional <span>Summary</span></h2>
+            <div class="about-card">
                 <p>Results-driven <strong>Quality Analyst</strong> with 1+ year of hands-on experience in manual testing
-                    and defect tracking across web and mobile applications. Strong understanding of STLC with proven
-                    ability to write test cases, execute module-wise testing, and collaborate with developers for bug
-                    resolution.</p>
-                <p style="margin-top: 15px;">Also experienced in <strong>Project Management</strong> using Agile/Scrum,
-                    JIRA, and Confluence. Possesses a working knowledge of web development (HTML, CSS, WordPress, Figma)
-                    which aids in understanding application architecture for better test coverage. Seeking to leverage
-                    QA expertise in a fast-paced product environment.</p>
+                    and defect tracking across web and mobile applications. Strong understanding of
+                    <strong>STLC</strong> with proven ability to write test cases, execute module-wise testing, and
+                    collaborate with developers for bug resolution.</p>
+                <br>
+                <p>Also experienced in <strong>Project Management</strong> using <strong>Agile/Scrum</strong>, JIRA, and
+                    Confluence. Possesses a working knowledge of web development (HTML, CSS, WordPress, Figma) which
+                    aids in understanding application architecture for better test coverage. Seeking to leverage QA
+                    expertise in a fast-paced product environment.</p>
             </div>
         </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-header reveal">Work Experience</h2>
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="exp-section" id="experience">
+        <div class="wrapper">
+            <p class="section-label reveal">Career Path</p>
+            <h2 class="section-title reveal">Work <span>Experience</span></h2>
 
-            <div class="glass-panel reveal">
-                <div class="timeline">
-                    <!-- Job 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <article class="job-card">
-                            <div class="job-header">
-                                <div>
-                                    <h3 class="job-title">Quality Analyst</h3>
-                                    <div class="job-company">RipenApps</div>
-                                    <span class="job-location"><i class="fa-solid fa-building"></i> On-site</span>
-                                </div>
-                                <div class="job-date"><i class="fa-regular fa-calendar"></i> Aug 2025 – Present</div>
-                            </div>
-                            <ul class="job-desc">
-                                <li>Performed comprehensive manual testing on web and mobile applications, ensuring
-                                    functionality, usability, and cross-browser compatibility.</li>
-                                <li>Created and maintained detailed test cases, test scenarios, and bug reports with
-                                    clear reproduction steps and severity classification.</li>
-                                <li>Tracked defects through their lifecycle using bug tracking tools, collaborating
-                                    closely with developers for timely resolution.</li>
-                                <li>Participated in STLC phases from requirement analysis to test closure, ensuring
-                                    thorough test coverage.</li>
-                                <li>Executed regression, smoke, and sanity testing to validate fixes and ensure no new
-                                    issues were introduced.</li>
-                                <li>Worked in Agile sprints, attending daily stand-ups and contributing to sprint
-                                    retrospectives for continuous improvement.</li>
-                            </ul>
-
-                            <div class="projects-tested">
-                                <h4><i class="fa-solid fa-rocket" style="color:var(--accent-pink);"></i> Projects Tested
-                                </h4>
-                                <div class="skill-tags" style="margin-top: 10px;">
-                                    <span class="tag">eBease (Web)</span>
-                                    <span class="tag">My Guests House (Web)</span>
-                                    <span class="tag">Holy Pills (Android)</span>
-                                    <span class="tag">CargoMe (Android)</span>
-                                    <span class="tag">Baajuu (Android)</span>
-                                    <span class="tag">I Jaipuria (Web)</span>
-                                    <span class="tag">Free Gurukul (Android)</span>
-                                </div>
-                            </div>
-                        </article>
+            <div class="exp-timeline">
+                <!-- Job 1 -->
+                <div class="exp-item reveal">
+                    <div class="exp-date">
+                        <div class="period">Aug 2025 – Present</div>
+                        <div class="location">On-site</div>
                     </div>
-
-                    <!-- Job 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <article class="job-card">
-                            <div class="job-header">
-                                <div>
-                                    <h3 class="job-title">Project Manager</h3>
-                                    <div class="job-company">BrancoSoft</div>
-                                    <span class="job-location"><i class="fa-solid fa-building"></i> Noida, India</span>
-                                </div>
-                                <div class="job-date"><i class="fa-regular fa-calendar"></i> Feb 2025 – Aug 2025</div>
+                    <div class="exp-content">
+                        <h3 class="exp-role">Quality Analyst</h3>
+                        <div class="exp-company"><i class="fa-solid fa-building"></i> RipenApps</div>
+                        <ul class="exp-list">
+                            <li>Performed comprehensive manual testing on web and mobile applications, ensuring
+                                functionality, usability, and cross-browser compatibility.</li>
+                            <li>Created and maintained detailed test cases, test scenarios, and bug reports with clear
+                                reproduction steps and severity classification.</li>
+                            <li>Tracked defects through their lifecycle using bug tracking tools, collaborating closely
+                                with developers for timely resolution.</li>
+                            <li>Participated in STLC phases from requirement analysis to test closure, ensuring thorough
+                                test coverage.</li>
+                            <li>Executed regression, smoke, and sanity testing to validate fixes and ensure no new
+                                issues were introduced.</li>
+                            <li>Worked in Agile sprints, attending daily stand-ups and contributing to sprint
+                                retrospectives for continuous improvement.</li>
+                        </ul>
+                        <div class="tested-projects">
+                            <h4><i class="fa-solid fa-rocket" style="color:var(--coral);"></i> Projects Tested</h4>
+                            <div class="tested-grid">
+                                <span class="tested-chip">eBease (Web)</span>
+                                <span class="tested-chip">My Guests House (Web)</span>
+                                <span class="tested-chip">Holy Pills (Android)</span>
+                                <span class="tested-chip">CargoMe (Android)</span>
+                                <span class="tested-chip">Baajuu (Android)</span>
+                                <span class="tested-chip">I Jaipuria (Web)</span>
+                                <span class="tested-chip">Free Gurukul (Android)</span>
                             </div>
-                            <ul class="job-desc">
-                                <li>Led cross-functional teams (developers, designers, QA) to gather, analyze, and
-                                    document business and functional requirements.</li>
-                                <li>Translated complex user needs into clear user stories, process flows, and acceptance
-                                    criteria for Agile/Scrum sprints.</li>
-                                <li>Facilitated sprint planning, daily stand-ups, and backlog grooming to ensure timely
-                                    milestone delivery.</li>
-                                <li>Created wireframes, mockups, and UI/UX prototypes in Figma, enhancing clarity and
-                                    speeding up development cycles.</li>
-                                <li>Supported QA teams with test case validation and conducted UAT to ensure solution
-                                    quality.</li>
-                                <li>Managed tasks, workflows, and documentation using JIRA, Confluence, and Lucidchart.
-                                </li>
-                                <li>Created SRS documents and conducted gap analysis to align business goals with
-                                    technical solutions.</li>
-                            </ul>
-                        </article>
+                        </div>
                     </div>
+                </div>
 
-                    <!-- Job 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <article class="job-card">
-                            <div class="job-header">
-                                <div>
-                                    <h3 class="job-title">Full-stack Developer</h3>
-                                    <div class="job-company">Unique</div>
-                                    <span class="job-location"><i class="fa-solid fa-building"></i> Delhi, India</span>
-                                </div>
-                                <div class="job-date"><i class="fa-regular fa-calendar"></i> Sep 2021 – Oct 2022</div>
-                            </div>
-                            <ul class="job-desc">
-                                <li>Developed and maintained responsive websites using HTML5, CSS3, and Bootstrap,
-                                    ensuring cross-device compatibility.</li>
-                                <li>Built and customized WordPress websites with mobile-first design and basic
-                                    performance optimization.</li>
-                                <li>Created visual layouts and UI components using Figma and Canva for client
-                                    presentations.</li>
-                                <li>Performed HTML/CSS validation and basic on-page SEO (meta tags, headings, internal
-                                    linking).</li>
-                                <li>Collaborated with clients to understand requirements and deliver design mockups
-                                    aligned with business goals.</li>
-                            </ul>
-                        </article>
+                <!-- Job 2 -->
+                <div class="exp-item reveal">
+                    <div class="exp-date">
+                        <div class="period">Feb 2025 – Aug 2025</div>
+                        <div class="location">Noida, India</div>
                     </div>
+                    <div class="exp-content">
+                        <h3 class="exp-role">Project Manager</h3>
+                        <div class="exp-company"><i class="fa-solid fa-building"></i> BrancoSoft</div>
+                        <ul class="exp-list">
+                            <li>Led cross-functional teams (developers, designers, QA) to gather, analyze, and document
+                                business and functional requirements.</li>
+                            <li>Translated complex user needs into clear user stories, process flows, and acceptance
+                                criteria for Agile/Scrum sprints.</li>
+                            <li>Facilitated sprint planning, daily stand-ups, and backlog grooming to ensure timely
+                                milestone delivery.</li>
+                            <li>Created wireframes, mockups, and UI/UX prototypes in Figma, enhancing clarity and
+                                speeding up development cycles.</li>
+                            <li>Supported QA teams with test case validation and conducted UAT to ensure solution
+                                quality.</li>
+                            <li>Managed tasks, workflows, and documentation using JIRA, Confluence, and Lucidchart.</li>
+                            <li>Created SRS documents and conducted gap analysis to align business goals with technical
+                                solutions.</li>
+                        </ul>
+                    </div>
+                </div>
 
+                <!-- Job 3 -->
+                <div class="exp-item reveal">
+                    <div class="exp-date">
+                        <div class="period">Sep 2021 – Oct 2022</div>
+                        <div class="location">Delhi, India</div>
+                    </div>
+                    <div class="exp-content">
+                        <h3 class="exp-role">Full-stack Developer</h3>
+                        <div class="exp-company"><i class="fa-solid fa-building"></i> Unique</div>
+                        <ul class="exp-list">
+                            <li>Developed and maintained responsive websites using HTML5, CSS3, and Bootstrap, ensuring
+                                cross-device compatibility.</li>
+                            <li>Built and customized WordPress websites with mobile-first design and basic performance
+                                optimization.</li>
+                            <li>Created visual layouts and UI components using Figma and Canva for client presentations.
+                            </li>
+                            <li>Performed HTML/CSS validation and basic on-page SEO (meta tags, headings, internal
+                                linking).</li>
+                            <li>Collaborated with clients to understand requirements and deliver design mockups aligned
+                                with business goals.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technical Skills -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-header reveal">Technical Skills</h2>
-            <div class="skills-grid reveal">
+    <!-- ===== SKILLS ===== -->
+    <section class="skills-section" id="skills">
+        <div class="wrapper">
+            <p class="section-label reveal">Expertise</p>
+            <h2 class="section-title reveal">Technical <span>Skills</span></h2>
 
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-shield-halved" style="color:var(--accent-blue);"></i> QA & Testing</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Manual Testing</span>
-                        <span class="tag">STLC & Defect Tracking</span>
-                        <span class="tag">Test Cases</span>
-                        <span class="tag">Regression / Sanity</span>
-                        <span class="tag">UAT</span>
-                        <span class="tag">API & Cross-browser</span>
+            <div class="skills-grid">
+                <div class="skill-card reveal reveal-delay-1">
+                    <div class="skill-icon" style="background:rgba(13,148,136,0.1); color:var(--teal);"><i
+                            class="fa-solid fa-shield-halved"></i></div>
+                    <h3>QA & Testing</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Manual Testing</span>
+                        <span class="skill-pill">STLC</span>
+                        <span class="skill-pill">Defect Tracking</span>
+                        <span class="skill-pill">Test Case Design</span>
+                        <span class="skill-pill">Regression</span>
+                        <span class="skill-pill">Smoke / Sanity</span>
+                        <span class="skill-pill">UAT</span>
+                        <span class="skill-pill">Cross-browser</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-chart-gantt" style="color:var(--accent-purple);"></i> Project Management
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="tag">Agile / Scrum</span>
-                        <span class="tag">JIRA / Confluence</span>
-                        <span class="tag">Sprint Planning</span>
-                        <span class="tag">User Stories & SRS</span>
-                        <span class="tag">Stakeholder Management</span>
+                <div class="skill-card reveal reveal-delay-2">
+                    <div class="skill-icon" style="background:rgba(99,102,241,0.1); color:var(--indigo);"><i
+                            class="fa-solid fa-chart-gantt"></i></div>
+                    <h3>Project Management</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Agile / Scrum</span>
+                        <span class="skill-pill">JIRA</span>
+                        <span class="skill-pill">Confluence</span>
+                        <span class="skill-pill">Sprint Planning</span>
+                        <span class="skill-pill">User Stories</span>
+                        <span class="skill-pill">SRS</span>
+                        <span class="skill-pill">Stakeholders</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-layer-group" style="color:var(--accent-pink);"></i> Web Development</h3>
-                    <div class="skill-tags">
-                        <span class="tag">HTML5 / CSS3</span>
-                        <span class="tag">Bootstrap / Tailwind CSS</span>
-                        <span class="tag">WordPress</span>
-                        <span class="tag">Figma / Canva</span>
-                        <span class="tag">SEO Basics</span>
-                        <span class="tag">Responsive Design</span>
+                <div class="skill-card reveal reveal-delay-3">
+                    <div class="skill-icon" style="background:rgba(244,132,95,0.1); color:var(--coral);"><i
+                            class="fa-solid fa-layer-group"></i></div>
+                    <h3>Web Development</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">HTML5</span>
+                        <span class="skill-pill">CSS3</span>
+                        <span class="skill-pill">Bootstrap</span>
+                        <span class="skill-pill">Tailwind CSS</span>
+                        <span class="skill-pill">WordPress</span>
+                        <span class="skill-pill">Figma</span>
+                        <span class="skill-pill">SEO</span>
+                        <span class="skill-pill">Responsive</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-terminal" style="color:var(--accent-blue);"></i> Programming & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Python (Basic)</span>
-                        <span class="tag">SQL / MongoDB</span>
-                        <span class="tag">C/C++ (Basic)</span>
-                        <span class="tag">Microsoft Office 365</span>
+                <div class="skill-card reveal reveal-delay-4">
+                    <div class="skill-icon" style="background:rgba(245,158,11,0.1); color:var(--amber);"><i
+                            class="fa-solid fa-terminal"></i></div>
+                    <h3>Programming & Tools</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">SQL</span>
+                        <span class="skill-pill">MongoDB</span>
+                        <span class="skill-pill">C / C++</span>
+                        <span class="skill-pill">MS Office 365</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Education, Certifications & Projects -->
-    <section id="education">
-        <div class="container">
-            <h2 class="section-header reveal">Education & Extras</h2>
+    <!-- ===== EDUCATION & EXTRAS ===== -->
+    <section class="extras-section" id="education">
+        <div class="wrapper">
+            <p class="section-label reveal">Background</p>
+            <h2 class="section-title reveal">Education & <span>Extras</span></h2>
 
-            <div class="card-grid reveal">
-                <!-- Education -->
-                <div class="glass-mini-card" style="grid-column: 1 / -1; display:flex; flex-wrap:wrap; gap:30px;">
-                    <div style="flex:1; min-width:280px;">
-                        <h3><i class="fa-solid fa-graduation-cap"
-                                style="color:var(--accent-blue); margin-right:8px;"></i> Master of Computer Application
-                            (MCA)</h3>
-                        <p style="font-weight: 600; color:var(--text-dark);">Dr. A.P.J. Abdul Kalam Technical
-                            University, Ghaziabad</p>
-                        <p style="font-size:0.9rem;">Expected May 2025</p>
-                    </div>
-                    <div style="flex:1; min-width:280px;">
-                        <h3><i class="fa-solid fa-award" style="color:var(--accent-purple); margin-right:8px;"></i>
-                            Bachelor of Computer Applications (BCA)</h3>
-                        <p style="font-weight: 600; color:var(--text-dark);">Institute of Management Education, Rajendra
-                            Nagar, Ghaziabad</p>
-                        <p style="font-size:0.9rem;">June 2023</p>
-                    </div>
+            <div class="extras-grid">
+                <div class="extra-card reveal reveal-delay-1">
+                    <div class="card-icon" style="background:rgba(13,148,136,0.1); color:var(--teal);"><i
+                            class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>MCA</h3>
+                    <p class="card-sub">Dr. A.P.J. Abdul Kalam Technical University, Ghaziabad</p>
+                    <p class="card-meta">Expected May 2025</p>
                 </div>
 
-                <!-- Projects -->
-                <div class="glass-mini-card">
-                    <h3><i class="fa-solid fa-laptop-code" style="color:var(--accent-pink); margin-right:8px;"></i>
-                        Personal Projects</h3>
-                    <ul class="job-desc">
-                        <li><strong>University Question Paper Portal:</strong> Designed a responsive platform for
-                            multiple universities to access previous-year papers.</li>
-                        <li><strong>Preschool Website:</strong> End-to-end development of a mobile-friendly preschool
-                            web app with engaging UX/UI.</li>
+                <div class="extra-card reveal reveal-delay-2">
+                    <div class="card-icon" style="background:rgba(99,102,241,0.1); color:var(--indigo);"><i
+                            class="fa-solid fa-award"></i></div>
+                    <h3>BCA</h3>
+                    <p class="card-sub">Institute of Management Education, Rajendra Nagar, Ghaziabad</p>
+                    <p class="card-meta">June 2023</p>
+                </div>
+
+                <div class="extra-card reveal reveal-delay-3">
+                    <div class="card-icon" style="background:rgba(244,132,95,0.1); color:var(--coral);"><i
+                            class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Personal Projects</h3>
+                    <ul>
+                        <li>University Question Paper Portal</li>
+                        <li>Preschool Website — modern, mobile-friendly UI</li>
                     </ul>
                 </div>
 
-                <!-- Certifications -->
-                <div class="glass-mini-card">
-                    <h3><i class="fa-solid fa-certificate" style="color:var(--accent-blue); margin-right:8px;"></i>
-                        Certifications & Languages</h3>
-                    <ul class="job-desc">
-                        <li>MongoDB, Python Bootcamp, Full-Stack Dev, Office 365, Web Designer</li>
-                        <li><strong>Languages:</strong> English (Professional) | Hindi (Native)</li>
+                <div class="extra-card reveal reveal-delay-4">
+                    <div class="card-icon" style="background:rgba(245,158,11,0.1); color:var(--amber);"><i
+                            class="fa-solid fa-certificate"></i></div>
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>Introduction to MongoDB</li>
+                        <li>Python Bootcamp</li>
+                        <li>Full-Stack Developer</li>
+                        <li>Microsoft Office 365</li>
+                        <li>Web Designer</li>
+                    </ul>
+                </div>
+
+                <div class="extra-card reveal reveal-delay-1">
+                    <div class="card-icon" style="background:rgba(13,148,136,0.1); color:var(--teal);"><i
+                            class="fa-solid fa-language"></i></div>
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>English — Professional Proficiency</li>
+                        <li>Hindi — Native Speaker</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <a href="#home" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-- ===== RESUME DOWNLOAD CTA ===== -->
+    <section class="cta-section">
+        <div class="wrapper reveal">
+            <div class="cta-card">
+                <h2>Interested in working together?</h2>
+                <p>Download my resume or reach out — I'd love to hear about new opportunities.</p>
+                <a href="Vikas_Pathak_Resume%20(2).pdf" download class="btn-download"><i
+                        class="fa-solid fa-file-arrow-down"></i> Download Full Resume (PDF)</a>
+            </div>
+        </div>
+    </section>
 
-    <!-- JavaScript for Animations and Interactions -->
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="wrapper">
+            <p>&copy; 2025 Vikas Pathak &middot; <a href="mailto:vp0990896@gmail.com"
+                    style="color:var(--teal);">vp0990896@gmail.com</a> &middot; <a href="tel:+918287066985"
+                    style="color:var(--teal);">+91 8287066985</a> &middot; <a
+                    href="https://linkedin.com/in/vikas-pathak-928398363" target="_blank"
+                    style="color:var(--teal);">LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <a href="#home" class="scroll-top" id="scrollTop"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Scroll reveal animation
+
+            // --- Scroll Reveal ---
             const reveals = document.querySelectorAll(".reveal");
-
             const revealOnScroll = () => {
-                const windowHeight = window.innerHeight;
-                const elementVisible = 100;
-
-                reveals.forEach((reveal) => {
-                    const elementTop = reveal.getBoundingClientRect().top;
-                    if (elementTop < windowHeight - elementVisible) {
-                        reveal.classList.add("active");
-                    }
+                const wh = window.innerHeight;
+                reveals.forEach(el => {
+                    if (el.getBoundingClientRect().top < wh - 80) el.classList.add("active");
                 });
             };
-
             window.addEventListener("scroll", revealOnScroll);
-            revealOnScroll(); // Trigger on load
+            revealOnScroll();
 
-            // Scroll to top visibility
-            const scrollTopBtn = document.querySelector('.scroll-top');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    scrollTopBtn.classList.add('visible');
-                } else {
-                    scrollTopBtn.classList.remove('visible');
-                }
+            // --- Navbar scroll effect ---
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+                navbar.classList.toggle("scrolled", window.scrollY > 60);
+            });
+
+            // --- Scroll to top ---
+            const scrollTopBtn = document.getElementById("scrollTop");
+            window.addEventListener("scroll", () => {
+                scrollTopBtn.classList.toggle("visible", window.scrollY > 500);
+            });
+
+            // --- Hamburger menu ---
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("navLinks");
+
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navLinks.classList.toggle("open");
+            });
+
+            navLinks.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    hamburger.classList.remove("active");
+                    navLinks.classList.remove("open");
+                });
             });
         });
     </script>
