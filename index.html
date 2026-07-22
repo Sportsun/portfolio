@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas Pathak | Quality Analyst & Project Manager</title>
+    <meta name="description" content="Portfolio of Vikas Pathak - Quality Analyst and Project Manager">
+
+    <!-- Fonts and Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ================= VARIABLES ================= */
+        :root {
+            /* Text Colors */
+            --text-dark: #0f172a;
+            /* Deep Slate */
+            --text-muted: #475569;
+            /* Muted Slate */
+
+            /* Glass properties */
+            --glass-bg: rgba(255, 255, 255, 0.65);
+            --glass-card: rgba(255, 255, 255, 0.45);
+            --glass-border: rgba(255, 255, 255, 0.8);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+
+            /* Accent Colors */
+            --accent-blue: #3b82f6;
+            --accent-pink: #ec4899;
+            --accent-purple: #8b5cf6;
+
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 32px;
+
+            --font-main: 'Outfit', sans-serif;
+        }
+
+        /* ================= RESET & TYPOGRAPHY ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            background-color: #f8fafc;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: var(--text-dark);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        a {
+            text-decoration: none;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ================= ANIMATED RGB MESH BACKGROUND ================= */
+        .mesh-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            background: #f8faff;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.6;
+            animation: moveBlob 20s infinite alternate ease-in-out;
+        }
+
+        .blob-1 {
+            top: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: rgba(147, 197, 253, 0.8);
+            /* Light Blue */
+            animation-delay: 0s;
+        }
+
+        .blob-2 {
+            top: 40%;
+            right: -20%;
+            width: 60vw;
+            height: 60vw;
+            background: rgba(249, 168, 212, 0.7);
+            /* Soft Pink */
+            animation-delay: -5s;
+        }
+
+        .blob-3 {
+            bottom: -20%;
+            left: 20%;
+            width: 45vw;
+            height: 45vw;
+            background: rgba(196, 181, 253, 0.8);
+            /* Soft Purple */
+            animation-delay: -10s;
+        }
+
+        .blob-4 {
+            top: 20%;
+            left: 40%;
+            width: 30vw;
+            height: 30vw;
+            background: rgba(167, 243, 208, 0.6);
+            /* Soft Mint Green */
+            animation-delay: -15s;
+        }
+
+        @keyframes moveBlob {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(10vw, -15vh) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-15vw, 10vh) scale(0.9);
+            }
+
+            100% {
+                transform: translate(-5vw, 20vh) scale(1.05);
+            }
+        }
+
+        /* ================= LAYOUT ================= */
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .glass-panel {
+            background: var(--glass-card);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--glass-shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .section-header {
+            font-size: 2.2rem;
+            margin-bottom: 35px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* ================= ANIMATIONS ================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+                box-shadow: 0 25px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* ================= HERO SECTION ================= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            text-align: center;
+            width: 100%;
+        }
+
+        .profile-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink), var(--accent-purple));
+            background-size: 200% 200%;
+            animation: float 5s ease-in-out infinite, gradientShift 4s ease infinite;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            letter-spacing: -2px;
+            margin-bottom: 5px;
+            font-weight: 800;
+        }
+
+        .hero h2 {
+            font-size: 1.6rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .contact-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 22px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s;
+        }
+
+        .pill:hover {
+            transform: translateY(-4px);
+            background: white;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* ================= SUMMARY SECTION ================= */
+        .glass-panel p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .glass-panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        .glass-panel strong {
+            color: var(--accent-purple);
+            font-weight: 700;
+        }
+
+        /* ================= EXPERIENCE ================= */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin-top: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple), transparent);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -38px;
+            top: 6px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid var(--accent-blue);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(2) .timeline-dot {
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+        }
+
+        .timeline-item:nth-child(3) .timeline-dot {
+            border-color: var(--accent-pink);
+            box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.2);
+        }
+
+        .job-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: var(--radius-md);
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s;
+        }
+
+        .job-card:hover {
+            transform: translateY(-3px) translateX(5px);
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .job-company {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        .job-date {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .job-location {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+            display: block;
+        }
+
+        .job-desc {
+            margin-top: 15px;
+        }
+
+        .job-desc li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        .job-desc li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--accent-purple);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .projects-tested {
+            margin-top: 20px;
+            padding: 18px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: var(--radius-sm);
+            border: 1px dashed rgba(139, 92, 246, 0.4);
+        }
+
+        .projects-tested h4 {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ================= SKILLS ================= */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.4s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .skill-category:hover::before {
+            opacity: 1;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: white;
+            color: var(--text-dark);
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .tag:hover {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 8px 15px rgba(59, 130, 246, 0.25);
+            border-color: transparent;
+        }
+
+        /* ================= PROJECTS & EDUCATION ================= */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .glass-mini-card {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.3s;
+        }
+
+        .glass-mini-card:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .glass-mini-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border-radius: 40px;
+            z-index: 100;
+            padding: 12px 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-purple);
+        }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: white;
+            color: var(--accent-blue);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 99;
+            font-size: 1.2rem;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            background: var(--accent-blue);
+            color: white;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .job-date {
+                margin-top: 5px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .glass-panel {
+                padding: 25px;
+            }
+
+            .timeline {
+                padding-left: 25px;
+            }
+
+            .timeline::before {
+                left: 4px;
+            }
+
+            .timeline-dot {
+                left: -26px;
+                width: 14px;
+                height: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Animated Mesh Background -->
+    <div class="mesh-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-logo">Vikas.</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="Vikas_Pathak_Resume%20(2).pdf" download style="color: var(--accent-blue); font-weight: 700;"><i
+                        class="fa-solid fa-file-pdf"></i> Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content reveal">
+            <!-- Profile Photo Container linked to image.png -->
+            <div class="profile-container">
+                <img src="image.png" alt="Vikas Pathak Profile Photo"
+                    onerror="this.src='https://placehold.co/400x400/eeeeee/3b82f6?text=VP'" class="profile-img">
+            </div>
+
+            <h1>Vikas Pathak</h1>
+            <h2>Quality Analyst & Project Manager</h2>
+
+            <div class="contact-pills">
+                <a href="Vikas_Pathak_Resume%20(2).pdf" download class="pill"
+                    style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); color: white; border: none; font-weight: 700; padding: 12px 30px; margin-bottom: 5px; box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);">
+                    <i class="fa-solid fa-download" style="color: white; margin-right: 5px;"></i> Download Resume
+                </a>
+                <div style="width: 100%; height: 5px;"></div> <!-- Break -->
+                <a href="mailto:vp0990896@gmail.com" class="pill"><i class="fa-solid fa-envelope"
+                        style="color: var(--accent-blue);"></i> vp0990896@gmail.com</a>
+                <a href="tel:+918287066985" class="pill"><i class="fa-solid fa-phone"
+                        style="color: var(--accent-pink);"></i> +91 8287066985</a>
+                <a href="https://www.linkedin.com/in/vikas-pathak-928398363?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank" class="pill"><i class="fa-brands fa-linkedin"
+                        style="color: var(--accent-purple);"></i> LinkedIn</a>
+                <span class="pill"><i class="fa-solid fa-location-dot" style="color: var(--accent-blue);"></i> Noida,
+                    India</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Summary -->
+    <section id="about">
+        <div class="container reveal">
+            <div class="glass-panel">
+                <h2 class="section-header">Professional Summary</h2>
+                <p>Results-driven <strong>Quality Analyst</strong> with 1+ year of hands-on experience in manual testing
+                    and defect tracking across web and mobile applications. Strong understanding of STLC with proven
+                    ability to write test cases, execute module-wise testing, and collaborate with developers for bug
+                    resolution.</p>
+                <p style="margin-top: 15px;">Also experienced in <strong>Project Management</strong> using Agile/Scrum,
+                    JIRA, and Confluence. Possesses a working knowledge of web development (HTML, CSS, WordPress, Figma)
+                    which aids in understanding application architecture for better test coverage. Seeking to leverage
+                    QA expertise in a fast-paced product environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-header reveal">Work Experience</h2>
+
+            <div class="glass-panel reveal">
+                <div class="timeline">
+                    <!-- Job 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <article class="job-card">
+                            <div class="job-header">
+                                <div>
+                                    <h3 class="job-title">Quality Analyst</h3>
+                                    <div class="job-company">RipenApps</div>
+                                    <span class="job-location"><i class="fa-solid fa-building"></i> On-site</span>
+                                </div>
+                                <div class="job-date"><i class="fa-regular fa-calendar"></i> Aug 2025 – Present</div>
+                            </div>
+                            <ul class="job-desc">
+                                <li>Performed comprehensive manual testing on web and mobile applications, ensuring
+                                    functionality, usability, and cross-browser compatibility.</li>
+                                <li>Created and maintained detailed test cases, test scenarios, and bug reports with
+                                    clear reproduction steps and severity classification.</li>
+                                <li>Tracked defects through their lifecycle using bug tracking tools, collaborating
+                                    closely with developers for timely resolution.</li>
+                                <li>Participated in STLC phases from requirement analysis to test closure, ensuring
+                                    thorough test coverage.</li>
+                                <li>Executed regression, smoke, and sanity testing to validate fixes and ensure no new
+                                    issues were introduced.</li>
+                                <li>Worked in Agile sprints, attending daily stand-ups and contributing to sprint
+                                    retrospectives for continuous improvement.</li>
+                            </ul>
+
+                            <div class="projects-tested">
+                                <h4><i class="fa-solid fa-rocket" style="color:var(--accent-pink);"></i> Projects Tested
+                                </h4>
+                                <div class="skill-tags" style="margin-top: 10px;">
+                                    <span class="tag">eBease (Web)</span>
+                                    <span class="tag">My Guests House (Web)</span>
+                                    <span class="tag">Holy Pills (Android)</span>
+                                    <span class="tag">CargoMe (Android)</span>
+                                    <span class="tag">Baajuu (Android)</span>
+                                    <span class="tag">I Jaipuria (Web)</span>
+                                    <span class="tag">Free Gurukul (Android)</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <article class="job-card">
+                            <div class="job-header">
+                                <div>
+                                    <h3 class="job-title">Project Manager</h3>
+                                    <div class="job-company">BrancoSoft</div>
+                                    <span class="job-location"><i class="fa-solid fa-building"></i> Noida, India</span>
+                                </div>
+                                <div class="job-date"><i class="fa-regular fa-calendar"></i> Feb 2025 – Aug 2025</div>
+                            </div>
+                            <ul class="job-desc">
+                                <li>Led cross-functional teams (developers, designers, QA) to gather, analyze, and
+                                    document business and functional requirements.</li>
+                                <li>Translated complex user needs into clear user stories, process flows, and acceptance
+                                    criteria for Agile/Scrum sprints.</li>
+                                <li>Facilitated sprint planning, daily stand-ups, and backlog grooming to ensure timely
+                                    milestone delivery.</li>
+                                <li>Created wireframes, mockups, and UI/UX prototypes in Figma, enhancing clarity and
+                                    speeding up development cycles.</li>
+                                <li>Supported QA teams with test case validation and conducted UAT to ensure solution
+                                    quality.</li>
+                                <li>Managed tasks, workflows, and documentation using JIRA, Confluence, and Lucidchart.
+                                </li>
+                                <li>Created SRS documents and conducted gap analysis to align business goals with
+                                    technical solutions.</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <article class="job-card">
+                            <div class="job-header">
+                                <div>
+                                    <h3 class="job-title">Full-stack Developer</h3>
+                                    <div class="job-company">Unique</div>
+                                    <span class="job-location"><i class="fa-solid fa-building"></i> Delhi, India</span>
+                                </div>
+                                <div class="job-date"><i class="fa-regular fa-calendar"></i> Sep 2021 – Oct 2022</div>
+                            </div>
+                            <ul class="job-desc">
+                                <li>Developed and maintained responsive websites using HTML5, CSS3, and Bootstrap,
+                                    ensuring cross-device compatibility.</li>
+                                <li>Built and customized WordPress websites with mobile-first design and basic
+                                    performance optimization.</li>
+                                <li>Created visual layouts and UI components using Figma and Canva for client
+                                    presentations.</li>
+                                <li>Performed HTML/CSS validation and basic on-page SEO (meta tags, headings, internal
+                                    linking).</li>
+                                <li>Collaborated with clients to understand requirements and deliver design mockups
+                                    aligned with business goals.</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-header reveal">Technical Skills</h2>
+            <div class="skills-grid reveal">
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-shield-halved" style="color:var(--accent-blue);"></i> QA & Testing</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Manual Testing</span>
+                        <span class="tag">STLC & Defect Tracking</span>
+                        <span class="tag">Test Cases</span>
+                        <span class="tag">Regression / Sanity</span>
+                        <span class="tag">UAT</span>
+                        <span class="tag">API & Cross-browser</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-chart-gantt" style="color:var(--accent-purple);"></i> Project Management
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="tag">Agile / Scrum</span>
+                        <span class="tag">JIRA / Confluence</span>
+                        <span class="tag">Sprint Planning</span>
+                        <span class="tag">User Stories & SRS</span>
+                        <span class="tag">Stakeholder Management</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-layer-group" style="color:var(--accent-pink);"></i> Web Development</h3>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5 / CSS3</span>
+                        <span class="tag">Bootstrap / Tailwind CSS</span>
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Figma / Canva</span>
+                        <span class="tag">SEO Basics</span>
+                        <span class="tag">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-terminal" style="color:var(--accent-blue);"></i> Programming & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python (Basic)</span>
+                        <span class="tag">SQL / MongoDB</span>
+                        <span class="tag">C/C++ (Basic)</span>
+                        <span class="tag">Microsoft Office 365</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education, Certifications & Projects -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-header reveal">Education & Extras</h2>
+
+            <div class="card-grid reveal">
+                <!-- Education -->
+                <div class="glass-mini-card" style="grid-column: 1 / -1; display:flex; flex-wrap:wrap; gap:30px;">
+                    <div style="flex:1; min-width:280px;">
+                        <h3><i class="fa-solid fa-graduation-cap"
+                                style="color:var(--accent-blue); margin-right:8px;"></i> Master of Computer Application
+                            (MCA)</h3>
+                        <p style="font-weight: 600; color:var(--text-dark);">Dr. A.P.J. Abdul Kalam Technical
+                            University, Ghaziabad</p>
+                        <p style="font-size:0.9rem;">Expected May 2025</p>
+                    </div>
+                    <div style="flex:1; min-width:280px;">
+                        <h3><i class="fa-solid fa-award" style="color:var(--accent-purple); margin-right:8px;"></i>
+                            Bachelor of Computer Applications (BCA)</h3>
+                        <p style="font-weight: 600; color:var(--text-dark);">Institute of Management Education, Rajendra
+                            Nagar, Ghaziabad</p>
+                        <p style="font-size:0.9rem;">June 2023</p>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="glass-mini-card">
+                    <h3><i class="fa-solid fa-laptop-code" style="color:var(--accent-pink); margin-right:8px;"></i>
+                        Personal Projects</h3>
+                    <ul class="job-desc">
+                        <li><strong>University Question Paper Portal:</strong> Designed a responsive platform for
+                            multiple universities to access previous-year papers.</li>
+                        <li><strong>Preschool Website:</strong> End-to-end development of a mobile-friendly preschool
+                            web app with engaging UX/UI.</li>
+                    </ul>
+                </div>
+
+                <!-- Certifications -->
+                <div class="glass-mini-card">
+                    <h3><i class="fa-solid fa-certificate" style="color:var(--accent-blue); margin-right:8px;"></i>
+                        Certifications & Languages</h3>
+                    <ul class="job-desc">
+                        <li>MongoDB, Python Bootcamp, Full-Stack Dev, Office 365, Web Designer</li>
+                        <li><strong>Languages:</strong> English (Professional) | Hindi (Native)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="#home" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- JavaScript for Animations and Interactions -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Scroll reveal animation
+            const reveals = document.querySelectorAll(".reveal");
+
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add("active");
+                    }
+                });
+            };
+
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // Trigger on load
+
+            // Scroll to top visibility
+            const scrollTopBtn = document.querySelector('.scroll-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
